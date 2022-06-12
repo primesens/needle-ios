@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CallerCVCell" customModule="Nedl" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="109" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="109" height="101"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYL-Ju-iRd">
+                        <rect key="frame" x="5" y="5" width="99" height="91"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-sw-Zle">
+                                <rect key="frame" x="10" y="25.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4p0-K2-p9V"/>
+                                    <constraint firstAttribute="width" secondItem="1ch-sw-Zle" secondAttribute="height" multiplier="1:1" id="e5t-Sq-6M3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSD-d1-oJ5">
+                                <rect key="frame" x="60" y="25.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CSv-9K-zHC"/>
+                                    <constraint firstAttribute="width" secondItem="eSD-d1-oJ5" secondAttribute="height" multiplier="1:1" id="rMR-lD-Yij"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="EndCall"/>
+                                <connections>
+                                    <action selector="didTapOnBtnEndCaller:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oR7-mJ-qSP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1ch-sw-Zle" firstAttribute="leading" secondItem="WYL-Ju-iRd" secondAttribute="leading" constant="10" id="91w-pZ-EJJ"/>
+                            <constraint firstItem="eSD-d1-oJ5" firstAttribute="centerY" secondItem="WYL-Ju-iRd" secondAttribute="centerY" id="I0H-e6-tBn"/>
+                            <constraint firstItem="eSD-d1-oJ5" firstAttribute="leading" secondItem="1ch-sw-Zle" secondAttribute="trailing" constant="10" id="Zgc-0E-08r"/>
+                            <constraint firstItem="1ch-sw-Zle" firstAttribute="centerY" secondItem="WYL-Ju-iRd" secondAttribute="centerY" id="s2r-rw-13w"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WYL-Ju-iRd" secondAttribute="trailing" constant="5" id="8tL-aN-ksA"/>
+                <constraint firstItem="WYL-Ju-iRd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="HC3-dI-gdM"/>
+                <constraint firstItem="WYL-Ju-iRd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="aeE-Al-q8q"/>
+                <constraint firstAttribute="bottom" secondItem="WYL-Ju-iRd" secondAttribute="bottom" constant="5" id="jsK-mT-JPj"/>
+            </constraints>
+            <size key="customSize" width="109" height="101"/>
+            <connections>
+                <outlet property="btnEndCall" destination="eSD-d1-oJ5" id="bRG-fW-7WJ"/>
+                <outlet property="callerAvatar" destination="1ch-sw-Zle" id="gRi-vC-gf1"/>
+                <outlet property="containerView" destination="WYL-Ju-iRd" id="LdS-AS-Pud"/>
+            </connections>
+            <point key="canvasLocation" x="180.43478260869566" y="116.18303571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="EndCall" width="51" height="51"/>
+    </resources>
+</document>
